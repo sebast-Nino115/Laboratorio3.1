@@ -1,6 +1,8 @@
 
 package Parqueadero;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Acer
@@ -35,6 +37,7 @@ public class Panelretirarvehiculo extends javax.swing.JFrame {
         cedu = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
+        pla1 = new javax.swing.JLabel();
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jLabel2.setText("Placa");
@@ -46,67 +49,80 @@ public class Panelretirarvehiculo extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("MS UI Gothic", 3, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Salida de vehiculos al parquedero");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 11, 307, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 380, -1));
 
         Placasalida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PlacasalidaActionPerformed(evt);
             }
         });
-        jPanel2.add(Placasalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 116, 47));
+        jPanel2.add(Placasalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 200, 47));
 
         pla.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        pla.setText("Placa");
-        jPanel2.add(pla, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 44, -1));
+        pla.setForeground(new java.awt.Color(255, 255, 255));
+        pla.setText("Tipo de vehículo");
+        jPanel2.add(pla, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 140, -1));
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 102));
+        jButton1.setBackground(new java.awt.Color(153, 153, 153));
         jButton1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Retirar");
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 102, 44));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 102, 44));
 
-        tipovehiculo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Carro", "Moto", "Bicicleta" }));
+        tipovehiculo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo de Vehiculo...", "Carro", "Moto", "Bicicleta" }));
         tipovehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tipovehiculoActionPerformed(evt);
             }
         });
-        jPanel2.add(tipovehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
+        jPanel2.add(tipovehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 200, -1));
 
         Cedulasalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulasalirActionPerformed(evt);
             }
         });
-        jPanel2.add(Cedulasalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 120, 50));
+        jPanel2.add(Cedulasalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 200, 50));
 
         cedu.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        cedu.setForeground(new java.awt.Color(255, 255, 255));
         cedu.setText("Cedula");
-        jPanel2.add(cedu, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 60, -1));
+        jPanel2.add(cedu, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 60, -1));
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
         jScrollPane2.setViewportView(jTextArea2);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 200, 230));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 240, 260));
+
+        pla1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        pla1.setForeground(new java.awt.Color(255, 255, 255));
+        pla1.setText("Placa");
+        jPanel2.add(pla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 44, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -142,6 +158,16 @@ public class Panelretirarvehiculo extends javax.swing.JFrame {
     private void CedulasalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulasalirActionPerformed
         
     }//GEN-LAST:event_CedulasalirActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        if (tipovehiculo.getSelectedItem()== "Tipo de Vehiculo..."){
+             JOptionPane.showMessageDialog(null, "Seleccione el tipo de vehiculo");
+        }
+        else if(tipovehiculo.getSelectedItem()== "Carro"){
+            
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,6 +219,7 @@ public class Panelretirarvehiculo extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JLabel pla;
+    private javax.swing.JLabel pla1;
     private javax.swing.JComboBox<String> tipovehiculo;
     // End of variables declaration//GEN-END:variables
 }
